@@ -1,25 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
+import "./navbar.scss";
 
 function Navbar() {
-    const [count, setCount] = useState(0);
-    useEffect(() => {
-        // Update the document title using the browser API
-        document.title = `You clicked ${count} times`;
-      });
     return (
-        <div>
-            <nav className="navbar">
-                <div className="navbar-container">
-                    <Link to="/" className="navbar-logo">
-                        AGNE cha hopp
-                    </Link>
-                    <p>count: {count}</p>
-                    <button onClick={() => setCount(count + 1)}>add</button>
-                </div>
-            </nav>
-        </div>
+        <nav className="navbar__button-container">
+            <Link to="/" className="navbar-button">
+                About me
+            </Link>
+            <Link to="/Gallery" className="navbar-button">
+                Gallery
+            </Link>
+            <Link to="/contacts" className="navbar-button">
+                Contacts
+            </Link>
+        </nav>
     )
 }
 
-export default Navbar
+export default Navbar;

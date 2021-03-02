@@ -1,0 +1,17 @@
+.footer {
+  background-color: #0e0e0e;
+  bottom: 0;
+  box-sizing: border-box;
+  color: #fff;
+  justify-content: flex-end;
+  left: 0;
+  padding: 0.5rem 4rem;
+  position: absolute;
+  text-transform: uppercase;
+  width: 100%;
+
+  .footer__text {
+    display: flex;
+    justify-content: space-between;
+  }
+}

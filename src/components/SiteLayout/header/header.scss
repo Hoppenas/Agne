@@ -1,0 +1,26 @@
+.header {
+  background-color: #0e0e0e;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 5%;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 1200px) {
+    .header {
+      width: 1170px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .header {
+      width: 970px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .header {
+      width: 750px;
+    }
+  }
+}

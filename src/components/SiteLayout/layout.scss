@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+
+.main-container {
+  .wrapper {
+    max-height: 100vh;
+    overflow-y: hidden;
+  }
+
+  .border {
+    height: 0.1rem;
+    background: #fff;
+    opacity: 0.1;
+    position: fixed;
+    z-index: 1000;
+    pointer-events: none;
+    // width: 100%;
+  }
+
+  .border-1 {
+    top: 25%;
+    width: 100%;
+  }
+
+  .border-2 {
+    top: 50%;
+    width: 100%;
+  }
+
+  .border-3 {
+    top: 75%;
+    width: 100%;
+  }
+
+  .border-h1 {
+    height: 100vh;
+    left: 25%;
+    width: 0.1rem;
+  }
+
+  .border-h2 {
+    height: 100vh;
+    left: 50%;
+    width: 0.1rem;
+  }
+
+  .border-h3 {
+    height: 100vh;
+    left: 75%;
+    width: 0.1rem;
+  }
+}
