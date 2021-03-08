@@ -4,20 +4,20 @@ import Layout from "../../components/SiteLayout/Layout";
 import Makeup from "./Makeup.jpg";
 import Painting from "./Painting.jpg";
 import axios from "axios";
+import {Cloudinary} from "@cloudinary/base";
+import {AdvancedImage} from '@cloudinary/react';
 
 const Gallery = () => {
-    //https://res.cloudinary.com/<your Cloudinary account's cloud name>/image/fetch/
-    const url = "http://res.cloudinary.com/ddwfyfmly/image/fetch/";
-    const [product, setProduct] = useState(null)
+    // Create a Cloudinary instance and set your cloud name.
+    const cld = new Cloudinary({
+        cloud: {
+            cloudName: 'ddwfyfmly'
+        }
+    });
 
-    useEffect(() => {
-        axios.get(url)
-            .then(response => {
-                setProduct(response.data)
-            })
-    }, [url])
-
-    // if (product) {console.log(product)};
+    // cld.image returns a CloudinaryImage with the configuration set.
+    const myImage = cld.image('sample');
+    console.log(myImage);
 
     return (
       <Layout>
@@ -29,6 +29,7 @@ const Gallery = () => {
             </div>   
             <div className="paintings__wrapper">
                 <img src={Painting} className="gallery-painting" alt="Paintings gallery."/>
+                {/* <AdvancedImage cldImg={myImage} /> */}
                 <p className="gallery-heading">Paintings</p>
             </div>         
         </div>
